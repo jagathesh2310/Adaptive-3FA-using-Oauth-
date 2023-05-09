@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .h-100 {
+            height: 100vh !important;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+        .s_div{
+            box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            padding: 2rem;
+        }
+    </style>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container h-100 d-flex align-items-center">
+        <div class="row w-100 s_div">
+            <div class="col-lg-6 mx-auto">
+                <h2 class="text-center mb-4">Registration Form</h2>
+                <form action="client_register" method="post">
+                    <div class="form-group">
+                        <label for="organization">Organization Name:</label>
+                        <input type="text" class="form-control" id="organization" name="organization" placeholder="Enter Organization Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

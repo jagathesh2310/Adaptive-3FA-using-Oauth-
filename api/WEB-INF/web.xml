@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+    version="5.0">
+    <servlet>
+      <servlet-name>index</servlet-name>
+      <jsp-file>/register.html</jsp-file>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>index</servlet-name>
+      <url-pattern>/</url-pattern>
+  </servlet-mapping>
+    <servlet>
+        <servlet-name>client_register</servlet-name>
+        <servlet-class>client_registeration</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>client_register</servlet-name>
+        <url-pattern>/client_register</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>com.duosecurity.controller.LoginController</servlet-class>
+      </servlet>
+      <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/resource/duo_auth</url-pattern>
+      </servlet-mapping>
+
+      <servlet>
+        <servlet-name>ValidationServer</servlet-name>
+        <servlet-class>com.oauth.ValidationServer</servlet-class>
+      </servlet>
+      <servlet-mapping>
+        <servlet-name>ValidationServer</servlet-name>
+        <url-pattern>/ValidationServer</url-pattern>
+      </servlet-mapping>
+
+      <servlet>
+        <servlet-name>otpresponse</servlet-name>
+        <servlet-class>com.resource.otpresponse</servlet-class>
+      </servlet>
+      <servlet-mapping>
+        <servlet-name>otpresponse</servlet-name>
+        <url-pattern>/resource/otpresponse</url-pattern>
+      </servlet-mapping>
+
+      <servlet>
+        <servlet-name>otpvalidation</servlet-name>
+        <servlet-class>com.resource.otpvalidation</servlet-class>
+      </servlet>
+      <servlet-mapping>
+        <servlet-name>otpvalidation</servlet-name>
+        <url-pattern>/resource/otpvalidation</url-pattern>
+      </servlet-mapping>
+      <servlet>
+        <servlet-name>adaptive</servlet-name>
+        <servlet-class>com.resource.adaptive</servlet-class>
+      </servlet>
+      <servlet-mapping>
+        <servlet-name>adaptive</servlet-name>
+        <url-pattern>/resource/adaptive</url-pattern>
+      </servlet-mapping>
+
+      <servlet>
+        <servlet-name>load_data</servlet-name>
+        <servlet-class>com.resource.load_data</servlet-class>
+      </servlet>
+      <servlet-mapping>
+        <servlet-name>load_data</servlet-name>
+        <url-pattern>/resource/load_data</url-pattern>
+      </servlet-mapping>
+
+
+      
+  <filter>
+    <filter-name>OAuthFilter</filter-name>
+    <filter-class>com.resource.OAuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>OAuthFilter</filter-name>
+        <url-pattern>/resource/*</url-pattern>
+  </filter-mapping>
+
+</web-app>

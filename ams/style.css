@@ -1,0 +1,135 @@
+.index-div{
+    gap: 100px;
+    
+}
+.index-div>a>button{
+    padding: 10px;
+    width: 7rem;
+}
+
+.login-div{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.col-md>a{
+    margin: 10px;
+}
+
+
+
+
+table, th, td {
+    border: 1px solid;
+  }
+table{
+    margin: 10px;
+    width: 100vh;
+}
+.home{
+    position: absolute;
+    top: -5px;
+}
+form{
+    margin: 10px;
+}
+body{
+    background: #16222a; 
+  background: -webkit-linear-gradient(to right, #16222a, #3a6073); 
+  background: linear-gradient(to right, #16222a, #3a6073); 
+  color:white !important;
+}
+.spinner-grow {
+    margin: 0.5rem;
+}
+.btn-index{
+    padding: 1rem !important;
+    width: 10rem;
+}
+
+
+
+
+
+
+/* Toggle */
+
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .toggle-switch-checkbox {
+            display: none;
+        }
+
+        .toggle-switch-label {
+            display: block;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid #999999;
+            border-radius: 20px;
+        }
+
+        .toggle-switch-inner {
+            display: block;
+            width: 200%;
+            margin-left: -100%;
+            transition: margin 0.3s ease-in 0s;
+        }
+
+        .toggle-switch-inner:before,
+        .toggle-switch-inner:after {
+            display: block;
+            float: left;
+            width: 50%;
+            height: 30px;
+            padding: 0;
+            line-height: 30px;
+            font-size: 14px;
+            color: white;
+            font-family: Trebuchet, Arial, sans-serif;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+
+        .toggle-switch-inner:before {
+            content: "ON";
+            padding-left: 10px;
+            background-color: #4cd964;
+            color: #FFFFFF;
+        }
+
+        .toggle-switch-inner:after {
+            content: "OFF";
+            padding-right: 10px;
+            background-color: #999999;
+            color: #FFFFFF;
+            text-align: right;
+        }
+
+        .toggle-switch-switch {
+            display: block;
+            width: 18px;
+            height: 18px;
+            margin: 6px;
+            background: #FFFFFF;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 36px;
+            border: 2px solid #999999;
+            border-radius: 20px;
+            transition: all 0.3s ease-in 0s;
+        }
+
+        .toggle-switch-checkbox:checked+.toggle-switch-label .toggle-switch-inner {
+            margin-left: 0;
+        }
+
+        .toggle-switch-checkbox:checked+.toggle-switch-label .toggle-switch-switch {
+            right: 0px;
+        }

@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello user</h1>
+
+    <button id="connectButton">Connect</button>
+
+<script>
+// const connectButton = document.getElementById("connectButton");
+// connectButton.addEventListener("click", () => {
+//     navigator.usb.requestDevice({filters: [ {vendorId: 0x05ac}, {vendorId: 0x04e8},{vendorId: 0x22b8},
+//     {vendorId: 0x0bb4}, {vendorId: 0x1004}, {vendorId: 0x0fce}, {vendorId: 0x18d1}, {vendorId: 0x12d1}, {vendorId: 0x2cB7},
+//     {vendorId: 0x22D9}, {vendorId: 0x0421} ]})
+// .then(device => {
+//   console.log('Device Name: ' + device.name);
+  
+// })
+// .catch(error => { console.log(error); });
+
+
+// });
+
+ async function temp () {
+	try{
+		const device = await navigator.usb.requestDevice({filters: [ {vendorId: 0x05ac}, {vendorId: 0x04e8},{vendorId: 0x22b8},
+    {vendorId: 0x0bb4}, {vendorId: 0x1004}, {vendorId: 0x0fce}, {vendorId: 0x18d1}, {vendorId: 0x12d1}, {vendorId: 0x2cB7},
+    {vendorId: 0x22D9}, {vendorId: 0x0421} ]});
+		if (device !== null) {
+			return device
+		} else {
+			console.log('No mobile device found');
+		}
+	}catch(er){
+		console.log(er.message);
+	}
+}
+
+
+const connectButton = document.getElementById("connectButton");
+connectButton.addEventListener("click", () => {
+    temp().then((device)=>{
+    console.log(device)
+})
+})
+
+</script>
+
+</body>
+</html>
